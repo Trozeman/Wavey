@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wavey ▶︎ •၊၊||၊|။|||| |</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="images/icon.svg" />
+  </head>
+  <body>
+    <!-- Preload splash -->
+    <div id="preload">
+      <div class="preload-content">
+        <svg class="mic-logo" viewBox="0 0 48 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="2" width="24" height="36" rx="12" fill="white"/>
+          <path d="M4 30 C4 54 44 54 44 30" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <line x1="24" y1="54" x2="24" y2="64" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <line x1="14" y1="64" x2="34" y2="64" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="wiggle-bars">
+          <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span>
+          <span style="--i:3"></span><span style="--i:4"></span><span style="--i:5"></span>
+          <span style="--i:6"></span><span style="--i:7"></span><span style="--i:8"></span>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="waveform"></canvas>
+
+    <button id="config-toggle" title="Settings">&#9881;</button>
+
+    <aside id="config-panel">
+      <span class="panel-title">Settings</span>
+
+      <section>
+        <label>Microphone</label>
+        <select id="mic-select"><option value="">Waiting for permission…</option></select>
+      </section>
+
+      <section>
+        <label>Style</label>
+        <div class="opt-group">
+          <button class="opt active" data-style="wave">Wave</button>
+          <button class="opt" data-style="bars">Bars</button>
+          <button class="opt" data-style="circle">Circle</button>
+          <button class="opt" data-style="pulse">Pulse</button>
+          <button class="opt" data-style="sides">Sides</button>
+        </div>
+      </section>
+
+      <section>
+        <label>Color</label>
+        <div class="opt-group">
+          <button class="opt active" data-color-mode="solid">Solid</button>
+          <button class="opt" data-color-mode="gradient">Gradient</button>
+        </div>
+      </section>
+
+      <section id="solid-section">
+        <div class="color-row">
+          <label>Color</label>
+          <input type="color" id="color" value="#00ff88" />
+        </div>
+      </section>
+
+      <section id="gradient-section" class="hidden">
+        <div class="color-row">
+          <label>From</label>
+          <input type="color" id="gradient-start" value="#ff0066" />
+        </div>
+        <div class="color-row">
+          <label>To</label>
+          <input type="color" id="gradient-end" value="#00ccff" />
+        </div>
+      </section>
+
+      <section>
+        <label>Line <span id="line-width-val">2 px</span></label>
+        <input type="range" id="line-width" min="1" max="20" value="2" step="1" />
+      </section>
+
+      <section>
+        <label>Scale <span id="scale-val">1.0×</span></label>
+        <input type="range" id="scale" min="0.1" max="3" value="1" step="0.05" />
+      </section>
+
+      <section>
+        <label>Decay <span id="delay-val">0 ms</span></label>
+        <input type="range" id="delay" min="0" max="300" value="0" step="5" />
+      </section>
+
+      <section>
+        <label>Background</label>
+        <div class="opt-group">
+          <button class="opt active" data-bg-mode="color">Color</button>
+          <button class="opt" data-bg-mode="image">Image</button>
+        </div>
+      </section>
+
+      <section id="bg-color-section">
+        <div class="color-row">
+          <label>Color</label>
+          <input type="color" id="bg-color" value="#000000" />
+        </div>
+      </section>
+
+      <section id="bg-image-section" class="hidden">
+        <label class="file-pick-btn" for="bg-file">Choose image…</label>
+        <input type="file" id="bg-file" accept="image/*" />
+        <div id="bg-preview">
+          <div id="bg-no-image">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="1.5" width="33" height="33" rx="4" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="10" y1="10" x2="26" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="26" y1="10" x2="10" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span>No image</span>
+          </div>
+          <img id="bg-preview-img" alt="background" class="hidden" />
+          <button id="bg-clear" class="hidden">Clear</button>
+        </div>
+      </section>
+      <section>
+        <label>Support the project</label>
+        <diw class="opt-group">
+          <img src="/images/img.png" alt="">
+          <a href='https://ko-fi.com/W7W51Y0AIA' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+        </diw>
+      </section>
+    </aside>
+
+    <script type="module" src="scripts/renderer.js"></script>
+  </body>
+</html>
