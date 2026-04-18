@@ -10,5 +10,7 @@ Beyond its aesthetic appeal, Wavey serves as a functional tool for audio monitor
 
 Lightweight and accessible through a web browser, Wavey removes the barrier between complex audio processing and artistic expression. It is more than just a visualizer; it is an invitation to see the music you hear and the words you speak in an entirely new light.
 
+[Visit Wavey](https://trozeman.github.io/Wavey/)
+
 <a href="https://ko-fi.com/W7W51Y0AIA" target="_blank"><img src="https://github.com/Trozeman/Wavey/blob/main/images/img.png?raw=true" width="350" /></a>
 <a href="https://ko-fi.com/W7W51Y0AIA" target="_blank"><img height="36" style="border:0px;height:36px;" src="https://storage.ko-fi.com/cdn/kofi6.png?v=6" border="0" alt="Buy Me a Coffee at ko-fi.com"></a>
