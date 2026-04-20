@@ -273,10 +273,10 @@ function recolorSvg() {
     s2.setAttribute('stop-color', settings.gradientEnd);
     grad.append(s1, s2);
     defs.appendChild(grad);
-    styleEl.textContent = `* { fill: url(#wv-grad) !important; stroke: url(#wv-grad) !important; }
+    styleEl.textContent = `#svg-overlay { fill: url(#wv-grad) !important; stroke: url(#wv-grad) !important; }
       [fill="none"] { fill: none !important; } [stroke="none"] { stroke: none !important; }`;
   } else {
-    styleEl.textContent = `* { fill: ${settings.color} !important; stroke: ${settings.color} !important; }
+    styleEl.textContent = `#svg-overlay { fill: ${settings.color} !important; stroke: ${settings.color} !important; }
       [fill="none"] { fill: none !important; } [stroke="none"] { stroke: none !important; }`;
   }
   svgEl.appendChild(styleEl);
