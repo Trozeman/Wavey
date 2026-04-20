@@ -26,6 +26,7 @@
     </div>
 
     <canvas id="waveform"></canvas>
+    <div id="svg-overlay"></div>
 
     <button id="config-toggle" title="Settings">&#9881;</button>
 
@@ -45,6 +46,33 @@
           <button class="opt" data-style="circle">Circle</button>
           <button class="opt" data-style="pulse">Pulse</button>
           <button class="opt" data-style="sides">Sides</button>
+          <button class="opt" data-style="custom">Custom</button>
+        </div>
+      </section>
+      
+      <section>
+        <label>SVG Overlays</label>
+        <label class="file-pick-btn" for="svg-file">Add SVG…</label>
+        <input type="file" id="svg-file" accept=".svg,image/svg+xml" />
+        <div id="svg-list"></div>
+      </section>
+
+      <section id="custom-effect-section" class="hidden">
+        <label>Effect</label>
+        <div class="opt-group">
+          <button class="opt active" data-effect="pulse">Pulse</button>
+          <button class="opt" data-effect="wiggle">Wiggle</button>
+          <button class="opt" data-effect="wave">Wave</button>
+          <button class="opt" data-effect="spawn">Spawn</button>
+        </div>
+      </section>
+
+      <section>
+        <label>Direction</label>
+        <div class="opt-group">
+          <button class="opt" data-dir="outside">Outside</button>
+          <button class="opt active" data-dir="both">Both</button>
+          <button class="opt" data-dir="inside">Inside</button>
         </div>
       </section>
 
