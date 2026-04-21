@@ -80,7 +80,7 @@ img {
   & .config-section {
     scroll-snap-align: start;
     margin-bottom: 2rem;
-
+ 
     & h2 {
       position: sticky; /* Modern approach to keep headers visible */
       top: 0;
